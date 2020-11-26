@@ -33,3 +33,6 @@ def getKitkats():
 @app.route("/api/candles")
 def getCandles():
     return jsonify(candles=candles)
+
+if __name__ == "__main__":
+    app.run()

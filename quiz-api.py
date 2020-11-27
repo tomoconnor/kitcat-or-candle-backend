@@ -19,8 +19,8 @@ with open("data/yankee-candles") as y:
 
 @app.route('/api/new')
 def new():
-    ks = [('k', k) for k in random.choices(kitkats, k=10)]
-    cs = [('c', c) for c in random.choices(candles, k=10)]
+    ks = [('k', k) for k in random.choices(kitkats, k=25)]
+    cs = [('c', c) for c in random.choices(candles, k=25)]
     gamedata = ks+cs
     random.shuffle(gamedata)
     return jsonify(data=gamedata)
